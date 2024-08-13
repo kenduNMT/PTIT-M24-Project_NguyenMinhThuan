@@ -7,7 +7,8 @@ export type UserType = {
     "phone": string,
     "birthday": string,
     "id": number,
-    "role": boolean
+    "role": boolean,
+    "block":boolean,
 
 }
 

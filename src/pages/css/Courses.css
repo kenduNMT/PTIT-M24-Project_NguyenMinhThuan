@@ -1,0 +1,55 @@
+.courses-container {
+    padding: 20px;
+    margin-top: 70px; /* Thêm khoảng trống phía trên để tránh chồng lên navbar */
+}
+
+.courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.course-card {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px); /* 3 columns with gap */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.course-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.course-card p {
+    color: #666;
+}
+
+.view-details-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.view-details-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .course-card {
+        width: calc(50% - 20px); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .course-card {
+        width: 100%; /* 1 column on very small screens */
+    }
+}

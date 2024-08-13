@@ -12,7 +12,23 @@ export const registerApi = async(user : object)=>{
 }
 
 export const loginApi = async(data : {email: string, password: string})=>{
-    const res = await instance.post("login", data);
-    return res.data;    
+    try {
+        const res = await instance.post("login", data);
+        const user = res.data;
+
+        return user;    
+    } catch (error: any) {
+        console.error('Lỗi khi gửi yêu cầu:', error.response?.data || error.message);
+        throw error;
+    }
 }
 
+export const updateUserProfile = async (userId : number, userData : object) => {
+    try {
+        const response = await instance.patch(`/users/${userId}`, userData);
+        return response.data;
+    } catch (error) {
+        console.error('Error updating user profile:', error.response ? error.response.data : error.message);
+        throw error;
+    }
+};

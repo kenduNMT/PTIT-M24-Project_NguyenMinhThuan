@@ -12,6 +12,7 @@ const initStateForm = {
     fullName: '',
     phone: '',
     birthday: '',
+    block: '',
     role: ''
 };
 
