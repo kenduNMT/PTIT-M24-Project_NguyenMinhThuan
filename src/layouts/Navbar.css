@@ -1,0 +1,25 @@
+#search-container {
+    position: relative;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    /* border: 1px solid #ddd; */
+    /* border-top: none; */
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.search-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-item:hover {
+    background-color: #f0f0f0;
+}

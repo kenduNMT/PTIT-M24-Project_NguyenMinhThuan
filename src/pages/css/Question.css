@@ -1,0 +1,65 @@
+/* CSS cho trang ExamDetail */
+.exam-detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.exam-detail-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.question-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.question-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.question-card label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.question-card input[type="radio"] {
+    margin-right: 10px;
+}
+
+button[type="button"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+.score {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.score h2 {
+    font-size: 24px;
+    color: #28a745;
+}

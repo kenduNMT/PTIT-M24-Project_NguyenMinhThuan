@@ -1,6 +1,6 @@
 .courses-container {
     padding: 20px;
-    margin-top: 70px; /* Thêm khoảng trống phía trên để tránh chồng lên navbar */
+    margin-top: 100px; /* Thêm khoảng trống phía trên để tránh chồng lên navbar */
 }
 
 .courses-grid {
@@ -52,4 +52,28 @@
     .course-card {
         width: 100%; /* 1 column on very small screens */
     }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination button:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
 }

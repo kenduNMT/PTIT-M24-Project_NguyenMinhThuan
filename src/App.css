@@ -11,7 +11,7 @@ body {
 .navbar {
     background-color: #ffffff;
     position: fixed;
-    left: 100px;
+    left: 200px;
 }
 
 .navbar .nav-item.active .nav-link,
@@ -23,7 +23,7 @@ body {
 .jumbotron {
     background-color: #F4F7FE;
     color: #595757;
-    margin-top: 75px;
+    margin-top: 150px;
 }
 
 .tail {
@@ -101,13 +101,11 @@ a:hover {
     background-color: #f0f0f0;
 }
 
-#searchForm {
+/* #searchForm {
     display: flex;
     align-items: center;
-    /* Căn giữa các phần tử theo chiều dọc */
-}
+} */
 
-#searchInput {
+/* #searchInput {
     margin-right: 10px;
-    /* Khoảng cách giữa ô tìm kiếm và nút tìm kiếm */
-}
+} */

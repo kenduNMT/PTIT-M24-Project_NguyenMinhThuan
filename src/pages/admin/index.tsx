@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Button, GetProp, Layout, Menu, MenuProps, theme } from 'antd';
-import { CalendarOutlined, CrownOutlined, HomeOutlined, LogoutOutlined } from '@ant-design/icons';
+import { CrownOutlined, HomeOutlined, LogoutOutlined } from '@ant-design/icons';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { logoutUser } from '../../store/slices/usersSlice';
 import { useDispatch } from 'react-redux';
@@ -15,16 +15,26 @@ const items: MenuItem[] = [
         icon: <HomeOutlined />,
         label: 'DashBoard',
     },
-    // {
-    //     key: '/admin/test',
-    //     icon: <CrownOutlined />,
-    //     label: 'Product',
-    // }
-    // ,
     {
-        key: '/admin/category',
+        key: '/admin/coursesManagemen',
         icon: <CrownOutlined />,
-        label: 'Category',
+        label: 'Courses',
+    }
+    ,
+    {
+        key: '/admin/examsManagemen',
+        icon: <CrownOutlined />,
+        label: 'Exams',
+    },
+    {
+        key: '/admin/examSubjectsManagemen',
+        icon: <CrownOutlined />,
+        label: 'Exams',
+    },
+    {
+        key: '/admin/questionManagemen',
+        icon: <CrownOutlined />,
+        label: 'Question',
     },
     {
         key: '/admin/user',
