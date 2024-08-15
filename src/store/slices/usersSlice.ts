@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { loginApi } from "../../service/user/auth";
 import { instance } from "../../service";
 import { UserType } from "../../config/interfaces";
+import axios from 'axios';
 
 const userLogin: UserType | null = null;
 
@@ -77,6 +78,13 @@ export const toggleBlockUser : any = createAsyncThunk(
         return res.data
     }
 );
+
+// Add new user
+export const addUser : any = createAsyncThunk('users/addUser', async (newUser: { email: string; password: string }) => {
+    const API_URL = 'http://localhost:9999/users';
+    const response = await axios.post(API_URL, newUser);
+    return response.data;
+});
 
 const userSlice = createSlice({
     name: "user",
@@ -163,6 +171,9 @@ const userSlice = createSlice({
             })
             .addCase(toggleBlockUser.rejected, (state, action) => {
                 state.error = action.error.message;
+            });
+            builder.addCase(addUser.fulfilled, (state, action) => {
+                state.users.push(action.payload);
             });
     },
 });
